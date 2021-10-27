@@ -1,0 +1,32 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Welcome to Lotto") {
+
+    <div class="left-section ng-scope">
+        <div class="ng-scope">
+            <a href="/" class="logo">
+                <img src="@routes.Assets.versioned("/images/logo.jpg")" alt="Real LOTTO">
+            </a>
+        </div>
+    </div>
+
+    <div class="top-bar">
+        <ul class="social">
+            <li class="fb">
+                <a target="_blank" href="https://www.facebook.com/csgocasescom/"><span></span></a>
+            </li>
+        </ul>
+        <button class="btn btn-primary">
+            LOGIN
+        </button>
+    </div>
+}

@@ -1,0 +1,59 @@
+a {
+    cursor: pointer;
+}
+
+a {
+    color: #aeb9c9;
+}
+
+.left-section {
+    float: left;
+    background: #121325;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.left-section, .logo {
+    width: 190px;
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #121325;
+    height: 75px;
+    line-height: 75px;
+}
+
+.logo img {
+    width: 93%;
+    margin-top: 7px;
+    background-color: #121325;
+}
+
+.top-bar {
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    float: right;
+    width: calc(100% - 190px);
+    background: #121325;
+}
+
+.social {
+    padding-top: 17px;
+    padding-left: 50px;
+    width: 152px;
+    height: 38px;
+}
+
+.logo, .menu li, .menu li a span, .social, .social li {
+    float: left;
+}
+
+ol, ul {
+    list-style: none;
+}
