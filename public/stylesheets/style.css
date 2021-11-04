@@ -43,6 +43,14 @@ a {
     background: #121325;
 }
 
+.main-content {
+    height: 100%;
+    float: right;
+    padding-left: 50px;
+    width: calc(100% - 190px);
+    background: #a4a9f8;
+}
+
 .social {
     padding-top: 17px;
     padding-left: 50px;
@@ -57,3 +65,65 @@ a {
 ol, ul {
     list-style: none;
 }
+
+/*roulette css*/
+.roulette-body{
+    font-family: 'Titillium Web', sans-serif;
+    background:#191B28;
+}
+.roulette-wrapper{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    width:100%;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+.roulette-wrapper .selector{
+    width:3px;
+    background:grey;
+    left:50%;
+    height:100%;
+    transform:translate(-50%,0%);
+    position:absolute;
+    z-index:2;
+}
+
+.roulette-wrapper .wheel{
+    display:flex;
+}
+
+.roulette-wrapper .wheel .row{
+    display:flex;
+}
+
+.roulette-wrapper .wheel .row .prize{
+    height:75px;
+    width:75px;
+    margin:3px;
+    border-radius:8px;
+    border-bottom:3px solid rgba(0,0,0,0.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:1.5em;
+}
+
+.prize.red{
+    background:#F95146;
+}
+
+.prize.black{
+    background:#2D3035;
+}
+
+.prize.green{
+    background:#00C74D;
+}
+
+*{
+    box-sizing:border-box;
+}
+/*roulette css end*/
