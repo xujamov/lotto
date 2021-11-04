@@ -13,21 +13,51 @@ function initWheel(){
       row = "";
 
   row += "<div class='row'>";
-  row += "  <div class='prize red'>1<\/div>";
-  row += "  <div class='prize black'>14<\/div>";
-  row += "  <div class='prize red'>2<\/div>";
-  row += "  <div class='prize black'>13<\/div>";
-  row += "  <div class='prize red'>3<\/div>";
-  row += "  <div class='prize black'>12<\/div>";
-  row += "  <div class='prize red'>4<\/div>";
-  row += "  <div class='prize green'>0<\/div>";
-  row += "  <div class='prize black'>11<\/div>";
-  row += "  <div class='prize red'>5<\/div>";
-  row += "  <div class='prize black'>10<\/div>";
-  row += "  <div class='prize red'>6<\/div>";
-  row += "  <div class='prize black'>9<\/div>";
-  row += "  <div class='prize red'>7<\/div>";
-  row += "  <div class='prize black'>8<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize1.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize14.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize2.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize13.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize3.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize12.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize4.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize0.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize11.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize5.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize10.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize6.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize9.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize7.webp' alt=''>" +
+      "<\/div>";
+  row += "  <div class='prize'>" +
+      "<img src='/assets//images/prize8.webp' alt=''>" +
+      "<\/div>";
   row += "<\/div>";
 
   for(var x = 0; x < 29; x++){
@@ -36,16 +66,20 @@ function initWheel(){
 }
 
 function spinWheel(roll){
+  var prizeTotal = 15,
+      prizeWidth = 150,
+      prizeMargin = 20;
+
   var $wheel = $('.roulette-wrapper .wheel'),
       order = [0, 11, 5, 10, 6, 9, 7, 8, 1, 14, 2, 13, 3, 12, 4],
       position = order.indexOf(roll);
 
   //determine position where to land
-  var rows = 12,
-      prize = 75 + 3 * 2,
-      landingPosition = (rows * 15 * prize) + (position * prize);
+  var rows = 5,
+      prize = prizeWidth + prizeMargin * 2,
+      landingPosition = (rows * prizeTotal * prize) + (position * prize);
 
-  var randomize = Math.floor(Math.random() * 75) - (75/2);
+  var randomize = Math.floor(Math.random() * prizeWidth) - (prizeWidth/2);
 
   landingPosition = landingPosition + randomize;
 
