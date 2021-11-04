@@ -3,8 +3,10 @@ $(document).ready(function() {
   initWheel();
 
   $('button').on('click', function(){
-    var outcome = parseInt($('input').val());
-    spinWheel(outcome);
+    // var outcome = parseInt($('input').val());
+    var myNumber = Math.random();
+    console.log("myNumber: ", myNumber)
+    spinWheel(myNumber);
   });
 });
 
@@ -70,10 +72,15 @@ function spinWheel(roll){
       prizeWidth = 150,
       prizeMargin = 20;
 
+  var randomOrder = (roll * prizeTotal) | 0;
+
   var $wheel = $('.roulette-wrapper .wheel'),
       order = [0, 11, 5, 10, 6, 9, 7, 8, 1, 14, 2, 13, 3, 12, 4],
-      position = order.indexOf(roll);
+      // temporarily commented
+      // position = order.indexOf(roll);
+      position = order.indexOf(randomOrder);
 
+  console.log("position: ", position)
   //determine position where to land
   var rows = 5,
       prize = prizeWidth + prizeMargin * 2,
