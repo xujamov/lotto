@@ -1,0 +1,6 @@
+@this(webJarsUtil: org.webjars.play.WebJarsUtil)
+@()
+@game.main("Game", webJarsUtil) {
+<div id="app-game"></div>
+<script src=@routes.Assets.versioned("client-fastopt-bundle.js")></script>
+}

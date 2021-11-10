@@ -82,7 +82,7 @@ ol, ul {
 
 .roulette-wrapper .selector{
     width:3px;
-    background:grey;
+    background:greenyellow;
     left:50%;
     height:100%;
     transform:translate(-50%,0%);
