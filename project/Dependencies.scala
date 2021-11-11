@@ -9,6 +9,7 @@ object Dependencies {
     val logOver = "1.7.30"
     val playWebjars = "2.8.0-1"
     val bootstrap = "5.1.2"
+    val jquery = "3.6.0"
     val reactJsV = "17.0.2"
     val scalaJsReactV = "2.0.0-RC3"
     val scalaCssV = "0.8.0-RC1"
@@ -27,7 +28,10 @@ object Dependencies {
       "ch.qos.logback" % "logback-classic" % Versions.logBack % Test)
 
     val webjarsLibs: Seq[ModuleID] =
-      Seq("org.webjars" %% "webjars-play" % Versions.playWebjars, "org.webjars" % "bootstrap" % Versions.bootstrap)
+      Seq("org.webjars" %% "webjars-play" % Versions.playWebjars,
+        "org.webjars" % "bootstrap" % Versions.bootstrap,
+        "org.webjars" % "jquery" % Versions.jquery
+      )
 
     val npmLibs = Seq("react" -> Versions.reactJsV, "react-dom" -> Versions.reactJsV)
 

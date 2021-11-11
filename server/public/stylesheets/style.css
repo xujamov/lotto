@@ -63,6 +63,15 @@ a {
     float: left;
 }
 
+.menu li a, .social li a {
+    display: block;
+    padding: 5px;
+}
+
+.social li.fb a span {
+    background-image: url(/images/ico-fb.webp);
+}
+
 ol, ul {
     list-style: none;
 }
