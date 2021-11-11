@@ -2,7 +2,7 @@ $(document).ready(function() {
   //setup multiple rows of colours, can also add and remove while spinning but overall this is easier.
   initWheel();
 
-  $('button').on('click', function(){
+  $('#button-play').on('click', function(){
     // var outcome = parseInt($('input').val());
     var myNumber = Math.random();
     console.log("myNumber: ", myNumber)
@@ -12,58 +12,58 @@ $(document).ready(function() {
 
 function initWheel(){
   var $wheel = $('.roulette-wrapper .wheel'),
-      row = "";
+      prizeBox = "";
 
-  row += "<div class='row'>";
-  row += "  <div class='prize'>" +
+  prizeBox += "<div class='prize-box'>";
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize1.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize14.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize2.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize13.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize3.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize12.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize4.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize0.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize11.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize5.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize10.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize6.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize9.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize7.webp' alt=''>" +
       "<\/div>";
-  row += "  <div class='prize'>" +
+  prizeBox += "  <div class='prize'>" +
       "<img src='/assets//images/prize8.webp' alt=''>" +
       "<\/div>";
-  row += "<\/div>";
+  prizeBox += "<\/div>";
 
   for(var x = 0; x < 29; x++){
-    $wheel.append(row);
+    $wheel.append(prizeBox);
   }
 }
 

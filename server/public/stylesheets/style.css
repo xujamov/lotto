@@ -26,11 +26,12 @@ a {
     background-color: #121325;
     height: 75px;
     line-height: 75px;
+    overflow: hidden;
 }
 
 .logo img {
     width: 93%;
-    margin-top: 7px;
+    margin: -50px 0 0 0;
     background-color: #121325;
 }
 
@@ -94,11 +95,11 @@ ol, ul {
     display:flex;
 }
 
-.roulette-wrapper .wheel .row{
+.roulette-wrapper .wheel .prize-box{
     display:flex;
 }
 
-.roulette-wrapper .wheel .row .prize{
+.roulette-wrapper .wheel .prize-box .prize{
     height:150px;
     width:150px;
     margin:20px;
