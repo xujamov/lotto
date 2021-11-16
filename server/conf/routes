@@ -2,6 +2,8 @@
 GET     /                                            @controllers.HomeController.index
 GET     /create-user                                 @controllers.HomeController.createUser
 GET     /get-users                                   @controllers.HomeController.getUsers
+GET     /game                                        @controllers.HomeController.game
+GET     /prizes                                      @controllers.HomeController.getPrizes
 
 GET     /assets/*file                                @controllers.Assets.versioned(path="/public", file: Asset)
 ->      /webjars                                     webjars.Routes

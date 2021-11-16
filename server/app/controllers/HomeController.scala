@@ -30,12 +30,25 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents,
 
   implicit val defaultTimeout: Timeout = Timeout(10.seconds)
 
+  case class Prize(prize: String)
+
+  val prizeList: List[Prize] = List(
+    Prize("https://cdn0.iconfinder.com/data/icons/fruits/128/Strawberry.png"),
+    Prize("https://cdn0.iconfinder.com/data/icons/fruits/128/Cherry.png"),
+    Prize("https://cdn0.iconfinder.com/data/icons/fruits/128/Apple.png")
+  )
+
   val user: UserWithoutId = UserWithoutId("Martin", "Odersky")
   implicit val userFormat: OFormat[User]   = Json.format[User]
+  implicit val prizeFormat: OFormat[Prize] = Json.format[Prize]
 
   def index = Action(Ok(indexTemplate()))
 
   def game: Action[AnyContent] = Action(Ok(gameTemplate()))
+
+  def getPrizes: Action[AnyContent] = Action {
+    Ok(Json.toJson(prizeList))
+  }
 
 
   def createUser: Action[AnyContent] = Action.async { implicit request =>
