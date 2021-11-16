@@ -10,6 +10,7 @@ import org.webjars.play.WebJarsUtil
 import play.api.Configuration
 import play.api.libs.json.{Json, OFormat, Reads, __}
 import play.api.mvc.{Action, AnyContent, BaseController, ControllerComponents}
+import protocols.UserProtocol.GetUsers
 import views.html._
 
 import javax.inject._
@@ -47,6 +48,17 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents,
         BadRequest("Error")
       }
 
+  }
+
+  def getUsers: Action[AnyContent] = Action.async {
+    (userManager ? GetUsers)
+      .mapTo[List[User]].map { users =>
+      Ok(Json.toJson(users))
+    }
+    .recover { case e =>
+      logger.error("Error happened", e)
+      Ok("Error")
+    }
   }
 
 }

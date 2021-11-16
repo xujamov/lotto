@@ -17,8 +17,8 @@ object Database {
       Session.pooled[F](
         host = "localhost",
         port = 5432,
-        database = "playexample",
-        user = "admin",
+        database = "gamelotto",
+        user = "gamelotto",
         password = "123".some,
         max = 1024)
 
