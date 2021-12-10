@@ -11,7 +11,10 @@ import scala.scalajs.js.annotation.JSExportTopLevel
 class Game extends AjaxImplicits {
 
   type AppComponentType = Component[Unit, State, Backend, CtorType.Nullary]
-  case class State(prizes: List[Prize] = Nil)
+  case class State(
+                    prizes: List[Prize] = Nil,
+                    users: List[User] = Nil
+                  )
 
   class Backend($: BackendScope[Unit, State]) {
 
